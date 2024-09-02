@@ -18,16 +18,3 @@ def hexToDec(hexNum):
         result =hexNumbers[char] * multiplicator + result
         multiplicator *= base
     return result
-    
-
-
-
-
-
-
-    
-
-        
-    
-
-
