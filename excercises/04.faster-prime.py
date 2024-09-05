@@ -1,26 +1,29 @@
 import timeit
 
+
 def allPrimesUpTo(num):
     # Initialize a boolean array "sieve" with True values
     sieve = [True] * (num + 1)
     # 0 and 1 are not prime numbers
     sieve[0] = sieve[1] = False
-    
+
     # Loop's ending condition is i * i <= num
     for i in range(2, int(num**0.5) + 1):
         if sieve[i]:
             # Mark multiples of i as non-prime
-            for j in range(i*i, num + 1, i):
+            for j in range(i * i, num + 1, i):
                 sieve[j] = False
-    
+
     # Collect all prime numbers
     return [i for i in range(num + 1) if sieve[i]]
+
 
 def test_prime_function(func, num, iterations=1000):
     # Measure the execution time of the function
     time_taken = timeit.timeit(lambda: func(num), number=iterations)
     # Return average time per iteration
     return time_taken / iterations
+
 
 # Test cases: different upper limits for prime calculation
 test_cases = [100, 200, 500, 1000]

@@ -1,6 +1,7 @@
 # Python code​​​​​​‌​‌‌‌​‌​‌‌​​​​‌​‌‌​‌​‌​‌​ below
 import itertools
 
+
 def encodeString(stringVal):
     # Your code goes here.
     result = []
@@ -9,9 +10,10 @@ def encodeString(stringVal):
         result.append((char, count))
     return result
 
+
 def decodeString(encodedList):
     # Your code goes here.
-    result = ''
+    result = ""
     for k, v in encodedList:
-        result += k*v
+        result += k * v
     return result
